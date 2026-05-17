@@ -174,10 +174,10 @@ with col1:
     st.dataframe(perf_df, use_container_width=True)
 with col2:
     st.subheader("✨ Smart Selector")
-    st.markdown("""
-    **Auto‑select best model** – for each transaction, the system runs **all models** and picks the one with the **highest fraud probability** (most confident).  
-    You can also choose a model manually below.
-    """)
+    # st.markdown("""
+    # **Auto‑select best model** – for each transaction, the system runs **all models** and picks the one with the **highest fraud probability** (most confident).  
+    # You can also choose a model manually below.
+    # """)
 
 # Manual override option
 manual_override = st.checkbox("🔧 Choose model manually (disable auto-select)")
@@ -259,14 +259,14 @@ if submitted:
                           delta="High risk" if fraud_prob > 0.7 else "Low risk" if fraud_prob < 0.3 else "Moderate risk",
                           delta_color="inverse" if fraud_prob > 0.5 else "normal")
 
-        st.markdown("""
-        <div style="background: #eef2ff; padding: 15px; border-radius: 20px; margin-top: 15px;">
-        <b>💡 How does auto‑calculation work?</b><br>
-        Normally, Sender's New Balance = Old Balance − Amount (money leaves).<br>
-        Receiver's New Balance = Old Balance + Amount (money arrives).<br>
-        If your transaction includes fees or errors, you can manually adjust the new balances.
-        </div>
-        """, unsafe_allow_html=True)
+        # st.markdown("""
+        # <div style="background: #eef2ff; padding: 15px; border-radius: 20px; margin-top: 15px;">
+        # <b>💡 How does auto‑calculation work?</b><br>
+        # Normally, Sender's New Balance = Old Balance − Amount (money leaves).<br>
+        # Receiver's New Balance = Old Balance + Amount (money arrives).<br>
+        # If your transaction includes fees or errors, you can manually adjust the new balances.
+        # </div>
+        # """, unsafe_allow_html=True)
 
     except Exception as e:
         st.error(f"Prediction error: {str(e)}")
