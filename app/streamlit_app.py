@@ -137,8 +137,8 @@ st.sidebar.title("🔍 Transaction Details")
 
 # Auto-calculate toggle
 auto_calc = st.sidebar.checkbox("✨ Auto‑calculate new balances (recommended)", value=True)
-st.sidebar.caption(
-    "When enabled, Sender's New Balance = Old Balance - Amount, and Receiver's New Balance = Old Balance + Amount. You can still edit manually.")
+# st.sidebar.caption(
+#     "When enabled, Sender's New Balance = Old Balance - Amount, and Receiver's New Balance = Old Balance + Amount. You can still edit manually.")
 
 with st.sidebar.form("input_form"):
     step = st.number_input("Step (time unit)", min_value=0, value=1, help="Hour or sequential step")
@@ -259,14 +259,14 @@ if submitted:
                           delta="High risk" if fraud_prob > 0.7 else "Low risk" if fraud_prob < 0.3 else "Moderate risk",
                           delta_color="inverse" if fraud_prob > 0.5 else "normal")
 
-        st.markdown("""
-        <div style="background: #eef2ff; padding: 15px; border-radius: 20px; margin-top: 15px;">
-        <b>💡 How does auto‑calculation work?</b><br>
-        Normally, Sender's New Balance = Old Balance − Amount (money leaves).<br>
-        Receiver's New Balance = Old Balance + Amount (money arrives).<br>
-        If your transaction includes fees or errors, you can manually adjust the new balances.
-        </div>
-        """, unsafe_allow_html=True)
+        # st.markdown("""
+        # <div style="background: #eef2ff; padding: 15px; border-radius: 20px; margin-top: 15px;">
+        # <b>💡 How does auto‑calculation work?</b><br>
+        # Normally, Sender's New Balance = Old Balance − Amount (money leaves).<br>
+        # Receiver's New Balance = Old Balance + Amount (money arrives).<br>
+        # If your transaction includes fees or errors, you can manually adjust the new balances.
+        # </div>
+        # """, unsafe_allow_html=True)
 
     except Exception as e:
         st.error(f"Prediction error: {str(e)}")
