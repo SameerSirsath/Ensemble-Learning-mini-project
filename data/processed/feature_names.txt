@@ -1,0 +1,13 @@
+step
+amount
+isFlaggedFraud
+balance_diff_orig
+balance_diff_dest
+error_orig
+error_dest
+amount_to_orig_ratio
+type_CASH_IN
+type_CASH_OUT
+type_DEBIT
+type_PAYMENT
+type_TRANSFER
