@@ -174,10 +174,10 @@ with col1:
     st.dataframe(perf_df, use_container_width=True)
 with col2:
     st.subheader("✨ Smart Selector")
-    st.markdown("""
-    **Auto‑select best model** – for each transaction, the system runs **all models** and picks the one with the **highest fraud probability** (most confident).  
-    You can also choose a model manually below.
-    """)
+    # st.markdown("""
+    # **Auto‑select best model** – for each transaction, the system runs **all models** and picks the one with the **highest fraud probability** (most confident).  
+    # You can also choose a model manually below.
+    # """)
 
 # Manual override option
 manual_override = st.checkbox("🔧 Choose model manually (disable auto-select)")
